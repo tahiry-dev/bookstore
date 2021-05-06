@@ -4,7 +4,7 @@
 
 > A front-end part of an application that manage and organize bookstore, built with React and Redux. 
 
-![screenshot](https://user-images.githubusercontent.com/47100064/117283209-3d1edb00-ae6e-11eb-8aa6-41e26c3e8ffe.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/117338951-d8807200-aea7-11eb-9292-7c8254d85f7b.png)
 
 This is the first milestone
 
