@@ -16,10 +16,11 @@ body {
   margin-top: 10%;
 }
 
-.element{
+.element {
   padding: 10px;
 }
 
-#category, button {
+#category,
+button {
   margin-left: 10px;
 }
