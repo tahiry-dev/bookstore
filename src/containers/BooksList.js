@@ -9,8 +9,8 @@ function BooksList({ booksList }) {
       <thead>
         <tr>
           <th>Book ID</th>
-          <th>title</th>
-          <th>category</th>
+          <th>Title</th>
+          <th>Category</th>
         </tr>
       </thead>
       <tbody>
