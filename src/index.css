@@ -1,3 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aliceblue;
+  background-color: azure;
+}
+
+.container {
+  width: 100%;
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+.element {
+  padding: 10px;
+}
+
+#category,
+button {
+  margin-left: 10px;
 }
