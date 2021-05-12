@@ -6,7 +6,7 @@
 
 ![screenshot](https://user-images.githubusercontent.com/47100064/117424536-89c7ec00-af2a-11eb-8fc0-bb5bd14f0170.png)
 
-This is the third milestone and allow users to add or delete book
+This is the fourth milestone and allow users to add or delete book and filter book by category
 
 ## Built With
 
