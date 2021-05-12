@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addBookAction, Categories } from '../actions/index';
 
-
 const BooksForm = props => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');

@@ -1,9 +1,11 @@
+/* eslint-disable import/extensions */
 import { combineReducers } from 'redux';
 import booksList from './book';
-import filter from './filter';
+import filter from './filters';
+/* eslint-enable import/extensions */
 
 const rootReducer = combineReducers({
-  booksList, filter
+  booksList, filter,
 });
 
 export default rootReducer;

@@ -1,18 +1,22 @@
+/* eslint-disable import/extensions */
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilters';
 import { deleteBookAction, filterBookAction } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+
+/* eslint-enable import/extensions */
 
 const BooksList = ({
   booksList, deleteBookAction, filterBookAction,
 }) => {
-  const handleRemoveBook = (book) => {
+  const handleRemoveBook = book => {
     deleteBookAction(book);
   };
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = filter => {
     filterBookAction(filter);
   };
 
@@ -30,7 +34,7 @@ const BooksList = ({
         </thead>
         <tbody>
           {booksList && booksList.length
-            ? booksList.map((item) => (
+            ? booksList.map(item => (
               <Book
                 key={item.id}
                 book={item}
@@ -44,22 +48,22 @@ const BooksList = ({
   );
 };
 
-const filterBooksByCategory = (state) => {
+const filterBooksByCategory = state => {
   const { booksList, filter } = state;
   if (filter !== 'All') {
-    return booksList.filter((book) => (book.category === filter));
+    return booksList.filter(book => (book.category === filter));
   }
   return booksList;
 };
 
-const mapStateToProps = (state) => ({ booksList: filterBooksByCategory(state) });
+const mapStateToProps = state => ({ booksList: filterBooksByCategory(state) });
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = dispatch => (
   {
-    deleteBookAction: (book) => {
+    deleteBookAction: book => {
       dispatch(deleteBookAction(book));
     },
-    filterBookAction: (filter) => {
+    filterBookAction: filter => {
       dispatch(filterBookAction(filter));
     },
   });
