@@ -2,45 +2,65 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { deleteBookAction } from '../actions/index';
+import { deleteBookAction, filterBookAction } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList({ booksList, deleteBookAction }) {
-  const handleRemoveBook = book => {
+const BooksList = ({
+  booksList, deleteBookAction, filterBookAction,
+}) => {
+  const handleRemoveBook = (book) => {
     deleteBookAction(book);
   };
+
+  const handleFilterChange = (filter) => {
+    filterBookAction(filter);
+  };
+
   return (
     <>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
             <th>Book ID</th>
             <th>title</th>
             <th>category</th>
-            <th className="heading_table">Remove Book</th>
+            <th>Remove Book</th>
           </tr>
         </thead>
         <tbody>
           {booksList && booksList.length
-            ? booksList.map(item => (
+            ? booksList.map((item) => (
               <Book
                 key={item.id}
                 book={item}
                 handleRemoveBook={handleRemoveBook}
               />
             ))
-            : 'No Books! '}
+            : (<tr><td>No Books! </td></tr>)}
         </tbody>
       </table>
     </>
   );
-}
+};
 
-const mapStateToProps = state => ({ booksList: state.booksList });
+const filterBooksByCategory = (state) => {
+  const { booksList, filter } = state;
+  if (filter !== 'All') {
+    return booksList.filter((book) => (book.category === filter));
+  }
+  return booksList;
+};
 
-const mapDispatchToProps = dispatch => (
+const mapStateToProps = (state) => ({ booksList: filterBooksByCategory(state) });
+
+const mapDispatchToProps = (dispatch) => (
   {
-    deleteBookAction: book => {
+    deleteBookAction: (book) => {
       dispatch(deleteBookAction(book));
+    },
+    filterBookAction: (filter) => {
+      dispatch(filterBookAction(filter));
     },
   });
 
@@ -53,4 +73,5 @@ BooksList.propTypes = {
     category: PropTypes.string.isRequired,
   })).isRequired,
   deleteBookAction: PropTypes.func.isRequired,
+  filterBookAction: PropTypes.func.isRequired,
 };
