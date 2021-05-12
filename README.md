@@ -4,7 +4,7 @@
 
 > A front-end part of an application that manage and organize bookstore, built with React and Redux. 
 
-![screenshot](https://user-images.githubusercontent.com/47100064/117424536-89c7ec00-af2a-11eb-8fc0-bb5bd14f0170.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/117924259-24934280-b2fe-11eb-831c-449014799cfc.png)
 
 This is the fourth milestone and allow users to add or delete book and filter book by category
 
