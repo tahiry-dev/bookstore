@@ -4,17 +4,20 @@ import { Categories } from '../actions/index';
 
 function CategoryFilter({ handleFilterChange }) {
   return (
-    <div className="selectBox">
-      <select name="filter" id="filter" onChange={e => { handleFilterChange(e.target.value); }}>
-        <option value="All">All</option>
-        {
-          Categories.map(item => (
-            <option value={item} key={item}>
-              {item}
-            </option>
-          ))
-        }
-      </select>
+    <div className="filterCategories">
+      <label htmlFor="filter">
+        Filter Category
+        <select name="filter" id="filter" onChange={e => { handleFilterChange(e.target.value); }}>
+          <option value="All">All</option>
+          {
+            Categories.map(item => (
+              <option value={item} key={item}>
+                {item}
+              </option>
+            ))
+          }
+        </select>
+      </label>
     </div>
   );
 }

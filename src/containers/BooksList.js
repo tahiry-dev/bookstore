@@ -1,13 +1,9 @@
-/* eslint-disable import/extensions */
-
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilters';
 import { deleteBookAction, filterBookAction } from '../actions/index';
-
-/* eslint-enable import/extensions */
 
 const BooksList = ({
   booksList, deleteBookAction, filterBookAction,
@@ -22,14 +18,13 @@ const BooksList = ({
 
   return (
     <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
             <th>Book ID</th>
             <th>title</th>
             <th>category</th>
-            <th>Remove Book</th>
+            <th className="removeBook">Remove Book</th>
           </tr>
         </thead>
         <tbody>
@@ -42,6 +37,7 @@ const BooksList = ({
               />
             ))
             : (<tr><td>No Books! </td></tr>)}
+          <CategoryFilter handleFilterChange={handleFilterChange} />
         </tbody>
       </table>
     </>
