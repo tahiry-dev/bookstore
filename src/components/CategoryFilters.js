@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { categories } from '../actions/index';
+import { Categories } from '../actions/index';
 
 function CategoryFilter({ handleFilterChange }) {
     return (
@@ -8,7 +8,7 @@ function CategoryFilter({ handleFilterChange }) {
             <select name="filter" id="filter" onChange={(e) => { handleFilterChange(e.target.value); }}>
                 <option value="All">All</option>
                 {
-                    categories.map((item) => (
+                    Categories.map((item) => (
                         <option value={item} key={item}>
                             {item}
                         </option>
