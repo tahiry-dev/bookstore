@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addBookAction } from '../actions/index';
-
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import { addBookAction, Categories } from '../actions/index';
 
 const BooksForm = props => {
   const [title, setTitle] = useState('');
@@ -40,7 +38,7 @@ const BooksForm = props => {
 
       <select name="category" id="category" value={category} onChange={handleChangeCategory}>
         {
-          categories.map(item => (
+          Categories.map(item => (
             <option value={item} key={item}>
               {item}
             </option>

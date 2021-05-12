@@ -1,13 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { deleteBookAction } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilters';
+import { deleteBookAction, filterBookAction } from '../actions/index';
 
-function BooksList({ booksList, deleteBookAction }) {
+const BooksList = ({
+  booksList, deleteBookAction, filterBookAction,
+}) => {
   const handleRemoveBook = book => {
     deleteBookAction(book);
   };
+
+  const handleFilterChange = filter => {
+    filterBookAction(filter);
+  };
+
   return (
     <>
       <table>
@@ -16,7 +24,7 @@ function BooksList({ booksList, deleteBookAction }) {
             <th>Book ID</th>
             <th>title</th>
             <th>category</th>
-            <th className="heading_table">Remove Book</th>
+            <th className="removeBook">Remove Book</th>
           </tr>
         </thead>
         <tbody>
@@ -28,19 +36,31 @@ function BooksList({ booksList, deleteBookAction }) {
                 handleRemoveBook={handleRemoveBook}
               />
             ))
-            : 'No Books! '}
+            : (<tr><td>No Books! </td></tr>)}
+          <CategoryFilter handleFilterChange={handleFilterChange} />
         </tbody>
       </table>
     </>
   );
-}
+};
 
-const mapStateToProps = state => ({ booksList: state.booksList });
+const filterBooksByCategory = state => {
+  const { booksList, filter } = state;
+  if (filter !== 'All') {
+    return booksList.filter(book => (book.category === filter));
+  }
+  return booksList;
+};
+
+const mapStateToProps = state => ({ booksList: filterBooksByCategory(state) });
 
 const mapDispatchToProps = dispatch => (
   {
     deleteBookAction: book => {
       dispatch(deleteBookAction(book));
+    },
+    filterBookAction: filter => {
+      dispatch(filterBookAction(filter));
     },
   });
 
@@ -53,4 +73,5 @@ BooksList.propTypes = {
     category: PropTypes.string.isRequired,
   })).isRequired,
   deleteBookAction: PropTypes.func.isRequired,
+  filterBookAction: PropTypes.func.isRequired,
 };
