@@ -24,7 +24,7 @@ function Book({ book, handleRemoveBook }) {
       <div className="book_progress">
         <div className="rounded-border" />
         <div className="book_progress_text">
-          <h4>80%</h4>
+          <h4>64%</h4>
           <span>Completed</span>
         </div>
       </div>

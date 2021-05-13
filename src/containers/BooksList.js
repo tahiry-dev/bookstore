@@ -28,7 +28,7 @@ const BooksList = ({
               handleRemoveBook={handleRemoveBook}
             />
           ))
-          : (<div className="noBook_error">No Books! </div>)}
+          : (<div className="noBook">Sorry, currently there are no books in such category </div>)}
       </div>
     </>
   );

@@ -7,10 +7,10 @@
 }
 
 body {
-  background-color: #f5f6fa; 
+  background-color: #f5f6fa;
 }
 
-/*---------------------------BOOK.JS STYLE--------------------------------------*/
+/* ---------------------------BOOK.JS STYLE-------------------------------------- */
 
 .list_of_books {
   display: flex;
@@ -58,6 +58,14 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
+}
+
+.nav_filter p {
+  color: #121212;
+  opacity: 0.7;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  margin: 0 12px 0 0;
 }
 
 .book_info_footer {
@@ -158,8 +166,14 @@ body {
   cursor: pointer;
 }
 
+.noBook {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Roboto Slab', sans-serif;
+}
 
-/*---------------------------BOOKsFORM.JS STYLE--------------------------------------*/
+/* ---------------------------BOOKsFORM.JS STYLE-------------------------------------- */
 
 .form_container {
   margin: 37px 100px 100px;
@@ -218,7 +232,7 @@ body {
   cursor: pointer;
 }
 
-/*---------------------------CATEGORYFILTER.JS STYLE--------------------------------------*/
+/* ---------------------------CATEGORYFILTER.JS STYLE-------------------------------------- */
 
 .navigation {
   display: flex;
@@ -235,14 +249,6 @@ body {
   justify-content: space-between;
   width: 140px;
   font-family: 'Montserrat', sans-serif;
-}
-
-.nav_filter p {
-  color: #121212;
-  opacity: 0.7;
-  font-size: 13px;
-  letter-spacing: 1.9px;
-  margin: 0 12px 0 0;
 }
 
 .nav_filter select {
