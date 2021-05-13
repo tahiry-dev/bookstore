@@ -4,9 +4,9 @@
 
 > A front-end part of an application that manage and organize bookstore, built with React and Redux. 
 
-![screenshot](https://user-images.githubusercontent.com/47100064/117924259-24934280-b2fe-11eb-831c-449014799cfc.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/118136448-cef98b80-b40c-11eb-919d-99900c363534.png)
 
-This is the fourth milestone and allow users to add or delete book and filter book by category
+This is the milestone 5 and allow users to add or delete book and filter book by category within a cool design
 
 ## Built With
 
@@ -18,6 +18,15 @@ This is the fourth milestone and allow users to add or delete book and filter bo
 
 [Live Demo Link](https://whispering-lake-09322.herokuapp.com)
 
+## Getting Start
+To get a local copy up and running follow these simple steps:
+- Open your terminal and Navigate to the directory where you will like to install the repo by running 
+```cd FOLDER-NAME ```
+- Clone the repository as follow
+```git clone https://github.com/tahiry-dev/bookstore.git```
+- Run the following commands one by one: ``` npm install``` and
+``` npm start```
+- The last command will open your default browser with the App
 
 ## Authors
 

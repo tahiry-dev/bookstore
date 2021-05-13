@@ -11,12 +11,12 @@ const initialState = {
     },
     {
       id: Math.random(),
-      title: 'jungle book',
-      category: 'Kids',
+      title: 'Dune',
+      category: 'Sci-Fi',
     },
     {
       id: Math.random(),
-      title: 'second world war',
+      title: 'The Great Gatsby',
       category: 'History',
     },
   ],
