@@ -18,28 +18,18 @@ const BooksList = ({
 
   return (
     <>
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>title</th>
-            <th>category</th>
-            <th className="removeBook">Remove Book</th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksList && booksList.length
-            ? booksList.map(item => (
-              <Book
-                key={item.id}
-                book={item}
-                handleRemoveBook={handleRemoveBook}
-              />
-            ))
-            : (<tr><td>No Books! </td></tr>)}
-          <CategoryFilter handleFilterChange={handleFilterChange} />
-        </tbody>
-      </table>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <div className="book_details">
+        {booksList && booksList.length
+          ? booksList.map(item => (
+            <Book
+              key={item.id}
+              book={item}
+              handleRemoveBook={handleRemoveBook}
+            />
+          ))
+          : (<div className="noBook_error">No Books! </div>)}
+      </div>
     </>
   );
 };
