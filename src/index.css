@@ -218,3 +218,50 @@ body {
   cursor: pointer;
 }
 
+/*---------------------------CATEGORYFILTER.JS STYLE--------------------------------------*/
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 38px;
+  padding: 17px 100px 17px 100px;
+  background-color: #fff;
+}
+
+.nav_filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav_filter p {
+  color: #121212;
+  opacity: 0.7;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  margin: 0 12px 0 0;
+}
+
+.nav_filter select {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+}
+
+.navigation_logo span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0290ff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  padding: 5px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  color: #0290ff;
+}
