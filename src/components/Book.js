@@ -15,7 +15,7 @@ function Book({ book, handleRemoveBook }) {
           <p className="book_title">{title}</p>
           <span className="book_author">Author</span>
         </div>
-        <div className="book_info_bottom">
+        <div className="book_info_footer">
           <p>Comment</p>
           <button type="button" onClick={() => handleRemoveBook(book)}>Remove</button>
           <p>Edit</p>
@@ -23,7 +23,7 @@ function Book({ book, handleRemoveBook }) {
       </div>
       <div className="book_progress">
         <div className="rounded-border" />
-        <div className="book_progress-text">
+        <div className="book_progress_text">
           <h4>80%</h4>
           <span>Completed</span>
         </div>

@@ -40,7 +40,7 @@ body {
 }
 
 .book_info_header .book_title {
-  width: 197px;
+  width: auto;
   height: 29px;
   margin: 3px 3px 0 0;
   font-family: 'Roboto Slab', serif;
@@ -116,19 +116,19 @@ body {
   border-width: 5px;
 }
 
-.book_progress-text {
+.book_progress_text {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 20px;
 }
 
-.book_progress-text h4 {
+.book_progress_text h4 {
   font-size: 30px;
   margin: 0;
   font-weight: 400;
 }
 
-.book_progress-text span {
+.book_progress_text span {
   font-size: 14px;
   color: #999a9c;
 }
